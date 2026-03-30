@@ -58,9 +58,9 @@ export default function Home() {
           <ContactForm />
       </section>
       <footer style={{ padding: 24, fontSize: 13, color: "#666" }}>
-          <div>(주) 지오클라비스</div>
-          <div>경기도 수원시 권선구 세화로 151번길 91-12</div>
-          <div>대표이사 : 김진영</div>
+          <div>선부 주식회사</div>
+          <div>경기도 평택시 점촌로24번길4</div>
+          <div>대표이사 : 신윤숙</div>
           <div>사업자등록번호 : 113-86-53980</div>
           <div>통신판매업 신고번호 : 제2016-수원권선-0364호</div>
           <div>대표전화 : 1599-3046 / 팩스 : 1599-3046</div>
