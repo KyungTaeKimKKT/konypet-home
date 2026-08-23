@@ -1,10 +1,15 @@
-import Section from "@/components/Section"
+import Section from '@/components/Section'
 
-export default function NeedToUse({ items }: { items: string[] }) {
+type Props = {
+  title: string
+  steps: string[]
+}
+
+export default function NeedToUse({ title, steps }: Props) {
   return (
-    <Section title="이럴 때 필요해요">
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {items.map((text, idx) => (
+    <Section title={title}>
+      <ul style={{ listStyle: 'none', padding: 0 }}>
+        {steps.map((text, idx) => (
           <li key={idx} style={{ marginBottom: 36 }}>
             {/* 문구 */}
             <strong>✔ {text}</strong>
@@ -13,22 +18,22 @@ export default function NeedToUse({ items }: { items: string[] }) {
             <div
               style={{
                 marginTop: 12,
-                width: "100%",
+                width: '100%',
                 maxWidth: 640,
-                marginLeft: "auto", // ← 추가
-                marginRight: "auto", // ← 추가
+                marginLeft: 'auto', // ← 추가
+                marginRight: 'auto', // ← 추가
                 borderRadius: 8,
-                overflow: "hidden",
-                background: "#f5f5f5",
+                overflow: 'hidden',
+                background: '#f5f5f5',
               }}
             >
               <img
                 src={`/need_${idx + 1}.jpg`}
                 alt={text}
                 style={{
-                  width: "100%",
-                  height: "auto",
-                  display: "block",
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
                 }}
               />
             </div>

@@ -1,17 +1,14 @@
-// src/pages/Home.tsx
+// src/pages/HomeEn.tsx
 
 import {
   HERO,
-  // PROBLEMS,
   APPEAL_ITEMS,
   FEATURES,
-  // INGREDIENTS,
   NEED_TO_USE,
   HOW_TO_USE,
   FAQ,
   CONTACT,
-  // COMPANY,
-} from '@/constants/contents'
+} from '@/constants/contents.en'
 
 import Hero from '@/components/Hero'
 import NeedToUseSection from '@/components/NeedToUse'
@@ -22,12 +19,13 @@ import FAQSection from '@/components/FAQ'
 import VideoSection from '@/components/VideoSection'
 import ContactForm from '@/components/ContactForm'
 
-export default function Home() {
+export default function HomeEn() {
   return (
     <>
       <Hero {...HERO} />
+
       <a
-        href="/풋센스_제품소개서.pdf"
+        href="/footsense_catalog.pdf"
         download
         style={{
           display: 'inline-block',
@@ -38,8 +36,9 @@ export default function Home() {
           textDecoration: 'none',
         }}
       >
-        📄 제품 카탈로그 다운로드
+        Download Product Catalog
       </a>
+
       <button
         onClick={() =>
           document
@@ -47,7 +46,7 @@ export default function Home() {
             ?.scrollIntoView({ behavior: 'smooth' })
         }
       >
-        문의하기
+        Contact Us
       </button>
 
       <button
@@ -57,26 +56,34 @@ export default function Home() {
             ?.scrollIntoView({ behavior: 'smooth' })
         }
       >
-        제품 영상 보기
+        Watch Product Video
       </button>
+
       <NeedToUseSection {...NEED_TO_USE} />
       <AppealAnimation {...APPEAL_ITEMS} />
       <FeatureList {...FEATURES} />
       <HowToUse {...HOW_TO_USE} />
+
       <section id="video">
-        <VideoSection title="제품소개영상" />
+        <VideoSection title="Product Video" />
       </section>
+
       <FAQSection {...FAQ} />
+
       <section id="contact">
         <ContactForm {...CONTACT} />
       </section>
+
       <footer style={{ padding: 24, fontSize: 13, color: '#666' }}>
-        <div>선부 주식회사</div>
-        <div>경기도 평택시 점촌로24번길4</div>
-        <div>대표이사 : 신윤숙</div>
-        <div>사업자등록번호 : 113-86-53980</div>
-        <div>통신판매업 신고번호 : 제2016-수원권선-0364호</div>
-        <div>대표전화 : 1599-3046 / 팩스 : 1599-3046</div>
+        <div>Sunbu Co., Ltd.</div>
+        <div>
+          4, Jeomchon-ro 24beon-gil, Pyeongtaek-si, Gyeonggi-do, Republic of
+          Korea
+        </div>
+        <div>CEO: Shin Yoon-sook</div>
+        <div>Business Registration No.: 113-86-53980</div>
+        <div>E-Commerce Registration No.: 2016-Suwon Gwonseon-0364</div>
+        <div>Tel: 1599-3046 / Fax: 1599-3046</div>
       </footer>
     </>
   )

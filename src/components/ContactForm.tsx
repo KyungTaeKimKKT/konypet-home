@@ -1,22 +1,34 @@
-// src/components/ContactForm.tsx
+import Section from '@/components/Section'
 
-import Section from "@/components/Section"
+type Props = {
+  title: string
+  namePlaceholder: string
+  contactPlaceholder: string
+  messagePlaceholder: string
+  submitText: string
+}
 
-export default function ContactForm() {
+export default function ContactForm({
+  title,
+  namePlaceholder,
+  contactPlaceholder,
+  messagePlaceholder,
+  submitText,
+}: Props) {
   return (
-    <Section title="문의하기">
+    <Section title={title}>
       <form
         style={{
-          display: "grid",
+          display: 'grid',
           gap: 12,
           maxWidth: 400,
-          margin: "0 auto",      // ★ 핵심
+          margin: '0 auto',
         }}
       >
-        <input placeholder="이름" />
-        <input placeholder="연락처" />
-        <textarea placeholder="문의 내용" rows={4} />
-        <button type="button">보내기</button>
+        <input placeholder={namePlaceholder} />
+        <input placeholder={contactPlaceholder} />
+        <textarea placeholder={messagePlaceholder} rows={4} />
+        <button type="button">{submitText}</button>
       </form>
     </Section>
   )

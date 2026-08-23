@@ -1,28 +1,32 @@
 // src/components/VideoSection.tsx
 
-import Section from "@/components/Section"
+import Section from '@/components/Section'
 
-export default function VideoSection() {
+type Props = {
+  title: string
+}
+
+export default function VideoSection({ title }: Props) {
   return (
-    <Section title="제품 소개 영상">
+    <Section title={title}>
       <div
         style={{
-          width: "100%",
+          width: '100%',
           maxWidth: 480,
-          aspectRatio: "9 / 16",   // 쇼츠 기준
-          margin: "0 auto",
-          overflow: "hidden",
+          aspectRatio: '9 / 16', // 쇼츠 기준
+          margin: '0 auto',
+          overflow: 'hidden',
           borderRadius: 8,
-          background: "#000",
+          background: '#000',
         }}
       >
         <video
           src="/코니펫쇼츠.mp4"
           controls
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
           }}
         />
       </div>
@@ -30,44 +34,44 @@ export default function VideoSection() {
 
       <div
         style={{
-          width: "100%",
+          width: '100%',
           maxWidth: 480,
-          aspectRatio: "9 / 16",   // 쇼츠 기준
-          margin: "0 auto",
-          overflow: "hidden",
+          aspectRatio: '9 / 16', // 쇼츠 기준
+          margin: '0 auto',
+          overflow: 'hidden',
           borderRadius: 8,
-          background: "#000",
+          background: '#000',
         }}
       >
         <video
           src="/바르는영상.mp4"
           controls
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
           }}
         />
       </div>
       <br />
       <div
         style={{
-          width: "100%",
+          width: '100%',
           maxWidth: 480,
-          aspectRatio: "9 / 16",   // 쇼츠 기준
-          margin: "0 auto",
-          overflow: "hidden",
+          aspectRatio: '9 / 16', // 쇼츠 기준
+          margin: '0 auto',
+          overflow: 'hidden',
           borderRadius: 8,
-          background: "#000",
+          background: '#000',
         }}
       >
         <video
           src="/흡수비교.mp4"
           controls
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
           }}
         />
       </div>

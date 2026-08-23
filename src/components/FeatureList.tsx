@@ -1,16 +1,21 @@
 // src/components/FeatureList.tsx
 
-import Section from "@/components/Section"
+import Section from '@/components/Section'
 
-type Feature = {
+type FeatureItem = {
   title: string
   desc: string
 }
 
-export default function FeatureList({ items }: { items: Feature[] }) {
+type Props = {
+  title: string
+  items: FeatureItem[]
+}
+
+export default function FeatureList({ title, items }: Props) {
   return (
-    <Section title="제품 특징">
-      <ul style={{ listStyle: "none", padding: 0 }}>
+    <Section title={title}>
+      <ul style={{ listStyle: 'none', padding: 0 }}>
         {items.map((item, idx) => (
           <li key={idx} style={{ marginBottom: 32 }}>
             {/* 제목 */}
@@ -20,30 +25,28 @@ export default function FeatureList({ items }: { items: Feature[] }) {
             <div
               style={{
                 marginTop: 12,
-                width: "100%",
+                width: '100%',
                 maxWidth: 640,
-                marginLeft: "auto", // ← 추가
-                marginRight: "auto", // ← 추가
+                marginLeft: 'auto', // ← 추가
+                marginRight: 'auto', // ← 추가
                 borderRadius: 8,
-                overflow: "hidden",
-                background: "#f5f5f5",
+                overflow: 'hidden',
+                background: '#f5f5f5',
               }}
             >
               <img
                 src={`/feature_${idx + 1}.jpg`}
                 alt={`제품 특징 ${idx + 1}`}
                 style={{
-                  width: "100%",
-                  height: "auto",
-                  display: "block",
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
                 }}
               />
             </div>
 
             {/* 설명 */}
-            <div style={{ color: "#555", marginTop: 8 }}>
-              {item.desc}
-            </div>
+            <div style={{ color: '#555', marginTop: 8 }}>{item.desc}</div>
           </li>
         ))}
       </ul>
