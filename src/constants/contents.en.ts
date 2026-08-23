@@ -1,7 +1,7 @@
 // src/constants/contents.en.ts
 
 export const HERO = {
-  title: 'CONYPET FootSense',
+  title: 'KONY-PET FootSense',
   subtitle: "Gentle Moisturizing Care for Your Pet's Paws",
   ctaPrimary: 'Contact Us',
   ctaSecondary: 'Watch Product Video',
